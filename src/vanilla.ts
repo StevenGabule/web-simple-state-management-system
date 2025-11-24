@@ -87,3 +87,6 @@ const createStoreImpl: CreateStoreImpl = (createState) => {
 
   return api as any;
 };
+
+export const createStore = ((createState) =>
+  createState ? createStoreImpl(createState) : createStoreImpl) as CreateStore;
