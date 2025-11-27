@@ -2,7 +2,6 @@ import { StoreMutators } from "./../vanilla";
 import { StateCreator, StoreMutatorIdentifier } from "../vanilla";
 import { NamedSet } from "./devtools";
 
-type Write<T, U> = Omit<T, keyof U> & U;
 type Action = { type: string };
 type StoreRedux<A> = {
   dispatch: (a: A) => A;

@@ -20,7 +20,6 @@ type Message = {
 
 type Action = string | { type: string; [x: string | number | symbol]: unknown };
 type Cast<T, U> = T extends U ? T : U;
-type Write<T, U> = Omit<T, keyof U> & U;
 type TakeTwo<T> = T extends { length: 0 }
   ? [undefined, undefined]
   : T extends { length: 1 }

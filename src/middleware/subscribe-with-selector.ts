@@ -12,8 +12,6 @@ type SubscribeWithSelector = <
   >
 ) => StateCreator<T, Mps, [["zustand/subscribeWithSelector", never], ...Mcs]>;
 
-type Write<T, U> = Omit<T, keyof U> & U;
-
 type WithSelectorSubscribe<S> = S extends { getState: () => infer T }
   ? Write<S, StoreSubscribeWithSelector<T>>
   : never;

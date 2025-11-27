@@ -10,3 +10,5 @@ interface Window {
   };
   __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose;
 }
+
+type Write<T, U> = Omit<T, keyof U> & U;

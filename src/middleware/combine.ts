@@ -1,7 +1,5 @@
 import type { StateCreator, StoreMutatorIdentifier } from "../vanilla";
 
-type Write<T, U> = Omit<T, keyof U> & U;
-
 export function combine<
   T extends object,
   U extends object,

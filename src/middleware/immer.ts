@@ -17,7 +17,6 @@ type Immer = <
 ) => StateCreator<T, Mps, [["zustand/immer", never], ...Mcs]>;
 
 type SetStateType<T extends unknown[]> = Exclude<T[0], (...args: any[]) => any>;
-type Write<T, U> = Omit<T, keyof U> & U;
 type WithImmer<S> = Write<S, StoreImmer<S>>;
 type SkipTwo<T> = T extends { length: 0 }
   ? []
